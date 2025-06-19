@@ -1,6 +1,8 @@
-public class PedidosService {
+package com.ejemplo;
 
-    private DescuentoRepository repository;
+public class PedidoService {
+
+    public DescuentoRepository repository;
 
     public PedidoService(DescuentoRepository repository) {
         this.repository = repository;
