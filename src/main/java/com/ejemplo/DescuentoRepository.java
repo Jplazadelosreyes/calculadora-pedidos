@@ -3,8 +3,10 @@ package com.ejemplo;
 public class DescuentoRepository {
 
     public double obtenerPorcentaje(String codigo) {
-        if (codigo.equals(10)) return 0.10;
+
+        if (codigo.equals("PROMO10"))
+            return 0.10;
+        else
         return 0.0;
     }
-
 }
