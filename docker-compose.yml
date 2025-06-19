@@ -1,0 +1,20 @@
+services:
+  maven-app:
+    build:
+      context: . # El contexto de construcción es el directorio actual
+      dockerfile: Dockerfile # Especifica el nombre del Dockerfile
+    volumes:
+      # Monta tu código fuente local en el contenedor
+      # Los cambios que hagas localmente se reflejarán instantáneamente
+      - ./src:/app/src
+      - ./pom.xml:/app/pom.xml
+      # Opcional: Montar el repositorio local de Maven para persistencia de dependencias
+      # - ~/.m2:/root/.m2
+    # Si tu aplicación expone un puerto (ej. una API REST), descomenta y ajusta:
+    # ports:
+    #   - "8080:8080"
+    working_dir: /app # Directorio de trabajo dentro del contenedor
+    # Comando para ejecutar. Para correr tests, cámbialo a 'mvn test'
+    command: mvn install # Puedes usar 'mvn test' o 'mvn clean install' o 'mvn spring-boot:run' si es una app Spring Boot
+    stdin_open: true # Permite la entrada estándar interactiva
+    tty: true        # Asigna un pseudo-TTY
