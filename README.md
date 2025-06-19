@@ -1,4 +1,4 @@
-
+[![Pruebas Unitarias Java](https://github.com/Jplazadelosreyes/calculadora-pedidos/actions/workflows/test.yml/badge.svg)](https://github.com/Jplazadelosreyes/calculadora-pedidos/actions/workflows/test.yml)
 # Calculadora de Pedidos
 
 Proyecto Java para calcular el total de un pedido con descuentos y diferentes tipos de envío. Incluye pruebas unitarias y está preparado para ejecutarse con Docker y Docker Compose.
